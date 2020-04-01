@@ -1,3 +1,4 @@
 <p>{{ quotes.description }}</p>
-<p>This quote was submitted on {{quotes.completeDate | timePassed}} </p>
+<p>This quote was submitted on {{quotes.completeDate | timePassed}} days ago </p>
 <button (click)= 'quoteComplete(true)'>Complete</button>
+<button (click)= 'quoteDelete(true)'>Delete</button>
