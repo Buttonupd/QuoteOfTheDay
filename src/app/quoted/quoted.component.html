@@ -1,0 +1,14 @@
+
+    <h1>Qoute of the day</h1>
+    <hr>
+    <ul>
+       <div *ngFor='let quote of quotes;let i = index'>
+     
+       <li appHashes>{{"His name is" + quote.author + " this quote was written by " + quote.name}}  
+      
+       </li>
+       <button (click)='toggleDetails(i)'>Toggle Details</button>
+        <app-quoted-in-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete)='completeQuote($event, i)'></app-quoted-in-detail>
+      </div>
+    </ul>
+    

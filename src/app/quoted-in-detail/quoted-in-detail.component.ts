@@ -1,0 +1,23 @@
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Qoutes } from '../qoutes'
+
+@Component({
+  selector: 'app-quoted-in-detail',
+  templateUrl: './quoted-in-detail.component.html',
+  styleUrls: ['./quoted-in-detail.component.css']
+})
+export class QuotedInDetailComponent implements OnInit {
+  @Input() quotes: Qoutes;
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  quoteComplete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
+  
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
