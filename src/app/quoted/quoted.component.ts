@@ -24,6 +24,15 @@ export class QuotedComponent implements OnInit {
       this.quotes.splice(index, 1)
     }
   }
+  deleteGoal(isComplete, index){
+    if (isComplete){
+      let toDelete = confirm(`You are deleting ${this.quotes[index].name}`)
+
+      if (toDelete){
+        confirm(`You have successfully deleted ${this.quotes.splice(index,1)}`)
+      }
+    }
+  }
 
   constructor() { }
 

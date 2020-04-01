@@ -9,6 +9,7 @@
        </li>
        <button (click)='toggleDetails(i)'>Toggle Details</button>
         <app-quoted-in-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete)='completeQuote($event, i)'></app-quoted-in-detail>
+        <app-quoted-in-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete)='deleteQuote($event, i)'></app-quoted-in-detail>
       </div>
     </ul>
     
