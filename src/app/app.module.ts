@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { QuotedComponent } from './quoted/quoted.component';
 import { QuotedInDetailComponent } from './quoted-in-detail/quoted-in-detail.component';
 import { HashesDirective } from './hashes.directive';
+import { TimePassedPipe } from './time-passed.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotedComponent,
     QuotedInDetailComponent,
-    HashesDirective
+    HashesDirective,
+    TimePassedPipe
   ],
   imports: [
     BrowserModule,
