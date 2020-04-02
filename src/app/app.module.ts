@@ -9,6 +9,7 @@ import { QuotedInDetailComponent } from './quoted-in-detail/quoted-in-detail.com
 import { HashesDirective } from './hashes.directive';
 import { TimePassedPipe } from './time-passed.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { QuoteVoteComponent } from './quote-vote/quote-vote.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     QuotedInDetailComponent,
     HashesDirective,
     TimePassedPipe,
-    QuoteFormComponent
+    QuoteFormComponent,
+    QuoteVoteComponent
   ],
   imports: [
     BrowserModule,
