@@ -15,10 +15,12 @@ export class QuotedComponent implements OnInit {
     new Qoutes('I&I','Batallion','Tomorrow is another day', new Date(2020,4,18)),
 
   ];
+  
 
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
+  
   completeQuote(isComplete, index){
     if (isComplete){
       this.quotes.splice(index, 1)
@@ -33,10 +35,18 @@ export class QuotedComponent implements OnInit {
       }
     }
   }
-
-  constructor() { }
+  
+  constructor() { };
 
   ngOnInit(): void {
   }
-
+  addNewQuote(qoutes){
+    let quotesLength = this.quotes.length;
+    qoutes.id = quotesLength+1;
+    qoutes.completeDate = new Date(qoutes.completeDate)
+    this.quotes.push(qoutes)
 }
+}
+
+
+
