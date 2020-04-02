@@ -29,7 +29,7 @@ export class QuotedComponent implements OnInit {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
       if (toDelete){
-        let c = toDelete = confirm(`You are deleting ${this.quotes.splice(name)}`)
+        let toDelete = alert(`You are deleting ${this.quotes.splice(index, 1)}`)
       }
     }
   }
