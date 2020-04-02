@@ -1,13 +1,31 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 body{
-    background-color: salmon;
+    background-color: gold;
     text-align: center;
+    background-image: url(src/assets/René-Descartes.jpg);
+    image-rendering: optimizeQuality;
+    background-position: inherit;
 }
 h1{
     color: blue;
 }
-ul{
-    color: linen;
+.container {
+    color: gold;
+}
+p1 {
+    color: gold;
+}
+h4{
+    color: gold;
+}
+h2{
+    color: gold;
+}
+.form-group{
+    color: gold;
+}
+.ready{
+    color: mediumblue;
 }
 button{
     align-items: flex-start;

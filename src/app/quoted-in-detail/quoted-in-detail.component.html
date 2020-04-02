@@ -1,5 +1,5 @@
 <p>{{ quotes.description }}</p>
-<p>This quote was submitted on {{quotes.completeDate | timePassed}} days ago </p>
+<p1>This quote was submitted on {{quotes.completeDate | date |  timePassed}} days ago </p1>
 
 <button (click)= 'quoteDelete(true)' class="=btn btn-outine danger">Delete</button>
 <button (click)= 'quoteComplete(true)' class="btn btn-outline danger">Complete</button>
