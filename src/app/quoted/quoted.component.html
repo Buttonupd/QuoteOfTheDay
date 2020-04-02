@@ -1,16 +1,27 @@
-
-    <h1>Qoute of the day</h1>
-    <hr>
-    <ul>
+<div class="container">
+   <h1>IQ' oted</h1>
+   <hr>
+ 
+   <div class="row">
+     <div class="col-md-6">
        <div *ngFor='let quote of quotes;let i = index'>
-     
-       <li appHashes>{{"His name is " + quote.author + '.'+ " this quote was written by " + quote.name }} on {{quote.completeDate | date}}
+         <div>
+            <h4 id = {{i}} appHashes > {{"His name is " + quote.author + "." + "This quote was submitted by" + quote.name}} Published on {{quote.completeDate | date}} </h4>
+           <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+         </div>
+ 
+         <div *ngIf='quote.showDescription'>
+           <app-quoted-in-detail  [quotes]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quoted-in-detail>
+           <app-quoted-in-detail  [quotes]='quote' (isComplete) = 'completeQuote($event,i)'></app-quoted-in-detail>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <p *ngIf='quotes.length > 5'>You have too many goals</p>
+ </div>
+ 
+ 
+ 
 
-       </li>
-       <button (click)='toggleDetails(i)'>Toggle Details</button>
-       <app-quoted-in-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete)='deleteQuote($event, i)'></app-quoted-in-detail>
-   
-        <app-quoted-in-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete)='completeQuote($event, i)'></app-quoted-in-detail>
-           </div>
-    </ul>
-    
+
