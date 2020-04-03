@@ -10,19 +10,12 @@ export class QuotedInDetailComponent implements OnInit {
   @Input() quotes: Qoutes;
   @Output() isComplete = new EventEmitter<boolean>();
 
+
   quoteComplete(complete:boolean){
     this.isComplete.emit(complete);
   }
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
-  }
-  
-
-  constructor() {
-    
-   }
-
-  ngOnInit(): void {
   }
   vote = new Qoutes('author','name','Quote',new Date, 'upVote', 'dnVote')
   upvote(){
@@ -30,6 +23,18 @@ export class QuotedInDetailComponent implements OnInit {
   }
   downvote(){
     this.vote.dnVote += 1
+  }
+   
+  // @Output() addVote = new EventEmitter<Qoutes>();
 
+  // submitVote(){
+  // this.addVote.emit(this.vote);
+  // }
+
+  constructor() {}
+  
+
+  ngOnInit(): void {
+  }
 }
-}
+
