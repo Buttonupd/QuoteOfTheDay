@@ -17,14 +17,16 @@ export class QuotedInDetailComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
-  vote = new Qoutes('author','name','Quote',new Date, 'upVote', 'dnVote')
+  quote1 = new Qoutes('Mark','Blue','Helo world',new Date, 0, 0);
+  quote2 = new Qoutes('Jane','Young','Very',new Date, 0, 0);
+  quote = new Qoutes('Junior','Tick','Attribute',new Date, 0, 0);
+  
   upvote(){
-    this.vote.upVote += 1;
+    this.quote.upVote += 1;
   }
   downvote(){
-    this.vote.dnVote += 1
+    this.quote.dnVote += 1
   }
-   
   // @Output() addVote = new EventEmitter<Qoutes>();
 
   // submitVote(){

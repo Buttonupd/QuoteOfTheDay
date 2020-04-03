@@ -10,6 +10,7 @@ import { HashesDirective } from './hashes.directive';
 import { TimePassedPipe } from './time-passed.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteVoteComponent } from './quote-vote/quote-vote.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuoteVoteComponent } from './quote-vote/quote-vote.component';
     HashesDirective,
     TimePassedPipe,
     QuoteFormComponent,
-    QuoteVoteComponent
+    QuoteVoteComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

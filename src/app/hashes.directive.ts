@@ -1,4 +1,5 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
+import { HighlightDirective } from './highlight.directive';
 
 @Directive({
   selector: '[appHashes]'

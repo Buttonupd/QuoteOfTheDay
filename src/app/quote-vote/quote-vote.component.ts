@@ -7,7 +7,7 @@ import { Qoutes} from '../qoutes';
   styleUrls: ['./quote-vote.component.css']
 })
 export class QuoteVoteComponent implements OnInit {
-  vote = new Qoutes('author','name','Quote',new Date, 'upVote', 'dnVote')
+  vote = new Qoutes('author','name','Quote',new Date, 0, 0)
 
   upvote(){
     this.vote.upVote += 1;

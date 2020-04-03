@@ -8,7 +8,7 @@ import { Qoutes } from '../qoutes';
 })
 export class QuotedComponent implements OnInit {
   quotes:Qoutes[] = [
-    new Qoutes('Lincoln', 'Susan', 'Do not ever be afraid of what you are not ', new Date(2020,4,14), 'upVote', 'dnVote'),
+    new Qoutes('Lincoln', 'Susan', 'Do not ever be afraid of what you are not ', new Date(2020,4,14), 0, 0),
     // new Qoutes('Garvey', 'Soni', 'Stars cannot shine without darkness ', new Date(2020,5,14)),
     // new Qoutes('Abraham','Button', 'The rose is thorny but a flower too', new Date(2020,4,19)),
     // new Qoutes('Marley','Nemesis','The roots of the righteous', new Date(2020,4,17)),
@@ -35,7 +35,7 @@ export class QuotedComponent implements OnInit {
       }
     }
   }
-  vote = new Qoutes('author','name','Quote',new Date, 'upVote', 'dnVote')
+  vote = new Qoutes('','','',new Date, 0, 0)
   upvote(){
     this.vote.upVote += 1;
   }
