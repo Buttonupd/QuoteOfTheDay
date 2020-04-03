@@ -1,5 +1,6 @@
 <p>{{ quotes.Quote }}</p>
 <p>This quote was submitted on {{quotes.completeDate | date |  timePassed}} days ago </p>
-
+<button class="btn btn-sm btn-success" (click)="upvote()"> {{vote.upVote}} <i class="fa fa-thumbs-up" id = 'like'></i> </button>
+<button class="btn btn-sm btn-hate" (click)="downvote()"> {{vote.dnVote}} <i class="fa fa-thumbs-up" id = 'dislike'></i> </button>
 <button (click)= 'quoteDelete(true)' class="=btn btn-outine danger">Delete</button>
 <button (click)= 'quoteComplete(true)' class="btn btn-outline danger">Complete</button>

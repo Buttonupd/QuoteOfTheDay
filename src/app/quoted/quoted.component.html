@@ -17,8 +17,10 @@
        </div>
      </div>
      <div class="col-md-6">
+      <!-- <button class="btn btn-sm btn-success" (click)="upvote()"> {{vote.upVote}} <i class="fa fa-thumbs-up" id = 'like'></i> </button>
+      <button class="btn btn-sm btn-hate" (click)="downvote()"> {{vote.dnVote}} <i class="fa fa-thumbs-up" id = 'dislike'></i> </button> -->
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-      <app-quote-vote ></app-quote-vote>
+      <app-quote-vote (vote)="vote"></app-quote-vote>
      </div>
    </div>
    <p *ngIf='quotes.length > 5'>You have too many goals</p>

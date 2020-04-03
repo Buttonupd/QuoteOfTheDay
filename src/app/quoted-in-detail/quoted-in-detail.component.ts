@@ -18,9 +18,18 @@ export class QuotedInDetailComponent implements OnInit {
   }
   
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
   }
+  vote = new Qoutes('author','name','Quote',new Date, 'upVote', 'dnVote')
+  upvote(){
+    this.vote.upVote += 1;
+  }
+  downvote(){
+    this.vote.dnVote += 1
 
+}
 }
